@@ -20,7 +20,9 @@ The app uses a ML model to to predict whether a new patient, based on these meas
 ## Running the App
 Simply click the link below to access the app, where you can enter the diagnostic measurements and receive a prediction.
 
-[![Run App](http://hassanimam.pythonanywhere.com/)
+
+[Run the App](http://hassanimam.pythonanywhere.com/)
+
 
 Please note that the app is for educational and informational purposes only and should not be used as a substitute for professional medical advice, diagnosis, or treatment.
 
