@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Diabetes Prediction Result</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        .result {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            padding: 20px;
+            margin: 20px;
+            text-align: center;
+            width: 80%;
+            max-width: 600px;
+        }
+        h1 {
+            color: #333;
+        }
+        .precautions {
+            background-color: #ffdddd;
+            border-left: 6px solid #f44336;
+            margin: 20px 0;
+            padding: 10px 20px;
+            text-align: left;
+        }
+        p {
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="result">
+        <h1>You are likely to be : {{result}}</h1>
+        <!-- Display precautions only if the person is diagnosed as diabetic -->
+        {% if result == 'Diabetic' %}
+            <div class="precautions">
+                <h2>Precautions for Diabetics</h2>
+                <p>Being diagnosed with diabetes requires careful monitoring and management of your health. Here are some precautions to consider:</p>
+                <ul>
+                    <li>Maintain a balanced diet rich in fruits, vegetables, and whole grains. Avoid excessive sugars and fats.</li>
+                    <li>Regular physical activity can help control your blood sugar levels. Aim for at least 30 minutes of moderate exercise most days of the week.</li>
+                    <li>Monitor your blood sugar levels regularly as advised by your healthcare provider.</li>
+                    <li>Stay hydrated and limit alcohol intake.</li>
+                    <li>Quit smoking to reduce your risk of complications.</li>
+                    <li>Regularly check your feet for cuts, blisters, or sores to prevent infections.</li>
+                    <li>Attend all scheduled health check-ups to monitor your condition and prevent complications.</li>
+                </ul>
+                <p>Remember, managing diabetes is a lifelong commitment that involves lifestyle changes and regular medical care. Work closely with your healthcare team to manage your condition effectively.</p>
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Health Status Result</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        .result {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            padding: 20px;
+            margin: 20px;
+            text-align: center;
+            width: 80%;
+            max-width: 600px;
+        }
+        h1 {
+            color: #333;
+        }
+        .lifestyle {
+            background-color: #ddffdd;
+            border-left: 6px solid #4CAF50;
+            margin: 20px 0;
+            padding: 10px 20px;
+            text-align: left;
+        }
+        p, li {
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="result">
+        <h1>You are not likely to be: {{result}}</h1>
+        <div class="lifestyle">
+            <h2>Maintaining a Healthy Lifestyle</h2>
+            <p>Leading a healthy lifestyle is crucial for preventing various health issues, including diabetes. Here are some tips to help you stay on track:</p>
+            <ul>
+                <li>Eat a balanced diet: Focus on fruits, vegetables, lean proteins, and whole grains. Limit processed foods and high-fat foods.</li>
+                <li>Stay active: Engage in at least 150 minutes of moderate aerobic activity or 75 minutes of vigorous activity each week, plus muscle-strengthening exercises on two or more days a week.</li>
+                <li>Maintain a healthy weight: Keeping your weight in a healthy range can help control blood sugar levels and reduce health risks.</li>
+                <li>Monitor your health regularly: Regular check-ups can help catch any early signs of health issues.</li>
+                <li>Limit alcohol intake and avoid smoking: Both can increase your risk of chronic diseases.</li>
+                <li>Stay hydrated: Drinking enough water is essential for overall health and helps regulate blood sugar levels.</li>
+                <li>Manage stress: Techniques like meditation, yoga, or deep breathing can improve mental health and well-being.</li>
+            </ul>
+            <p>Adopting these habits can help you maintain good health and prevent the development of diabetes and other health conditions in the future.</p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Diabetes Prediction Model</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        .container {
+            width: 80%;
+            max-width: 600px;
+            background: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        p, li {
+            color: #666;
+        }
+        ul {
+            margin: 10px 0;
+        }
+        .button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin: 20px 0;
+            font-size: 18px;
+            color: #fff;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+        }
+        .button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to the Diabetes Prediction Tool</h1>
+        <p>This tool uses a predictive model to assess the likelihood of diabetes based on several input factors. Below are the factors used by the model to make predictions:</p>
+        
+        <ul>
+            <li><strong>Pregnancies:</strong> The number of times the individual has been pregnant.</li>
+            <li><strong>Glucose:</strong> The plasma glucose concentration a 2 hours in an oral glucose tolerance test.</li>
+            <li><strong>Blood Pressure:</strong> Diastolic blood pressure (mm Hg).</li>
+            <li><strong>Skin Thickness:</strong> Triceps skin fold thickness (mm).</li>
+            <li><strong>Insulin:</strong> 2-Hour serum insulin (mu U/ml).</li>
+            <li><strong>BMI:</strong> Body mass index (weight in kg/(height in m)^2).</li>
+            <li><strong>Diabetes Pedigree Function:</strong> A function that scores the likelihood of diabetes based on family history.</li>
+            <li><strong>Age:</strong> Age in years.</li>
+        </ul>
+        
+        <p>The model has been trained on a dataset of individuals with known diabetes outcomes and uses this information to make predictions about new data. It's designed to help individuals assess their risk and encourage those with high-risk predictions to seek professional medical advice.</p>
+
+        <p>This tool is intended for informational purposes only and is not a substitute for professional medical advice, diagnosis, or treatment.</p>
+
+        <a href="{{ url_for('predict_datapoint') }}" class="button">Start Your Diabetes Risk Assessment</a>
+    </div>
+</body>
+</html>

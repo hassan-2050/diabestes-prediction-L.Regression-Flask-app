@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Diabetes Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .login {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        input[type="text"] {
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            box-sizing: border-box; /* Added to include padding in input width */
+        }
+        .btn {
+            cursor: pointer;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: white;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+        .btn:hover {
+            background-color: #0056b3;
+        }
+        .btn-block {
+            width: 100%; /* Makes the button extend to the edges of the form */
+        }
+        .btn-large {
+            padding: 15px; /* Larger padding for a bigger button */
+        }
+    </style>
+</head>
+<body>
+    <div class="login">
+        <h1>Diabetes Prediction</h1>
+        <form action="{{ url_for('predict_datapoint')}}" method="post">
+            <input type="text" name="Pregnancies" placeholder="Pregnancies" required="required" />
+            <input type="text" name="Glucose" placeholder="Glucose" required="required" />
+            <input type="text" name="BloodPressure" placeholder="BloodPressure" required="required" />
+            <input type="text" name="SkinThickness" placeholder="SkinThickness" required="required" />
+            <input type="text" name="Insulin" placeholder="Insulin" required="required" />
+            <input type="text" name="BMI" placeholder="BMI" required="required" />
+            <input type="text" name="DiabetesPedigreeFunction" placeholder="DiabetesPedigreeFunction" required="required" />
+            <input type="text" name="Age" placeholder="Age" required="required" />
+            <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+        </form>
+        <!-- Assuming {{result}} is a placeholder for displaying results -->
+        <div>{{result}}</div>
+    </div>
+</body>
+</html>
